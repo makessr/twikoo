@@ -9,7 +9,7 @@
       <div class="tk-row">
         <div class="tk-meta">
           <strong class="tk-nick" v-if="!convertedLink">{{ comment.nick }}</strong>
-          <a class="tk-nick tk-nick-link" v-if="convertedLink" :href="convertedLink" target="_blank" rel="noopener noreferrer">
+          <a href="javascript:void(0)" class="tk-nick tk-nick-link" v-if="convertedLink" :href="convertedLink" target="_blank" rel="noopener noreferrer">
             <strong>{{ comment.nick }}</strong>
           </a>
           <span class="tk-tag tk-tag-green" v-if="comment.master">{{ config.MASTER_TAG || t('COMMENT_MASTER_TAG') }}</span>
@@ -32,7 +32,7 @@
             @reply="onReply" />
       </div>
       <div class="tk-content" :class="{ 'tk-content-expand': isContentExpanded || !showContentExpand }" ref="tk-content">
-        <span v-if="comment.pid">{{ t('COMMENT_REPLIED') }} <a class="tk-ruser" :href="`#${comment.pid}`">@{{ comment.ruser }}</a> :</span>
+        <span v-if="comment.pid">{{ t('COMMENT_REPLIED') }} <a href="javascript:void(0)" class="tk-ruser" :href="`#${comment.pid}`">@{{ comment.ruser }}</a> :</span>
         <span v-html="comment.comment" ref="comment" @click="popupLightbox"></span>
       </div>
       <div class="tk-expand-wrap" v-if="showContentExpand">

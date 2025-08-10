@@ -23,7 +23,7 @@
         <input class="tk-input-image" type="file" accept="image/*" value="" ref="inputFile" @change="onSelectImage" />
         <div class="tk-error-message">{{ errorMessage }}</div>
       </div>
-      <a class="tk-submit-action-icon __markdown"
+      <a href="javascript:void(0)" class="tk-submit-action-icon __markdown"
           alt="Markdown is supported"
           href="https://guides.github.com/features/mastering-markdown/"
           target="_blank"
